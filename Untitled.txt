@@ -1,0 +1,18 @@
+python manage.py shell
+
+from news.models import *
+
+
+# Создать двух пользователей (с помощью метода User.objects.create_user('username')).
+U1 = User.objects.create_user('Вася')
+U2 = User.objects.create_user('Петя')
+
+
+#Создать два объекта модели Author, связанные с пользователями.
+Author.objects.create(user_author=U1)
+Author.objects.create(user_author=U2)
+
+#Добавить 4 категории в модель Category.
+
+
+
